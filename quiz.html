@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Quiz Sicurezza Stradale</title>
+<!-- SOLO HTML E CSS BASE -->
+<style>
+   body {
+     font-family: Arial;
+     background-color: #eeeeee;
+   }
+   h1 {
+     text-align: center;
+     color: blue;
+   }
+   .box {
+     background-color: white;
+     padding: 15px;
+     margin: 15px;
+   }
+   label {
+     display: inline-block;
+     padding: 5px;
+     margin: 4px 10px 4px 0;
+   }
+   /* NASCONDE COLORI FINCHÉ NON SI PREME INVIA */
+   #verifica:not(:target) .correct:checked + label,
+   #verifica:not(:target) .wrong:checked + label {
+     background-color: transparent;
+   }
+   /* DOPO INVIA */
+   #verifica:target .correct:checked + label {
+     background-color: lightgreen;
+   }
+   #verifica:target .wrong:checked + label {
+     background-color: lightcoral;
+   }
+   a.button {
+     display: inline-block;
+     padding: 10px;
+     background-color: lightblue;
+     text-decoration: none;
+     color: black;
+     margin: 20px;
+   }
+</style>
+</head>
+<body>
+<h1>Quiz sulla Sicurezza Stradale</h1>
+<div id="verifica">
+<div class="box">
+<p><strong>1. Cosa bisogna fare quando il semaforo è rosso?</strong></p>
+<input type="radio" name="q1" class="wrong" id="q1a">
+<label for="q1a">Passare velocemente</label>
+<input type="radio" name="q1" class="correct" id="q1b">
+<label for="q1b">Fermarsi</label>
+<input type="radio" name="q1" class="wrong" id="q1c">
+<label for="q1c">Suonare il clacson</label>
+</div>
+<div class="box">
+<p><strong>2. È corretto usare il cellulare mentre si guida?</strong></p>
+<input type="radio" name="q2" class="wrong" id="q2a">
+<label for="q2a">Sì</label>
+<input type="radio" name="q2" class="correct" id="q2b">
+<label for="q2b">No</label>
+</div>
+<div class="box">
+<p><strong>3. A cosa serve la cintura di sicurezza?</strong></p>
+<input type="radio" name="q3" class="correct" id="q3a">
+<label for="q3a">A proteggere in caso di incidenti</label>
+<input type="radio" name="q3" class="wrong" id="q3b">
+<label for="q3b">A giudare meglio</label>
+<input type="radio" name="q3" class="wrong" id="q3c">
+<label for="q3c">A stare comodi</label>
+</div>
+<div class="box">
+<p><strong>4. Dove devono attraversare i pedoni?</strong></p>
+<input type="radio" name="q4" class="wrong" id="q4a">
+<label for="q4a">Ovunque</label>
+<input type="radio" name="q4" class="wrong" id="q4b">
+<label for="q4b">In mezzo alla strada</label>
+<input type="radio" name="q4" class="correct" id="q4c">
+<label for="q4c">Sulle strisce pedonali</label>
+</div>
+<div class="box">
+<p><strong>5. Perché è importante rispettare i limiti di velocità?</strong></p>
+<input type="radio" name="q5" class="wrong" id="q5a">
+<label for="q5a">Per arrivare prima</label>
+<input type="radio" name="q5" class="correct" id="q5b">
+<label for="q5b">Per ridurre gli incidenti</label>
+<input type="radio" name="q5" class="wrong" id="q5c">
+<label for="q5c">Non è importante</label>
+</div>
+<div class="box">
+<p><strong>6. Quando è obbligatorio indossare il casco in moto o scooter?</strong></p>
+<input type="radio" name="q6" class="wrong" id="q6a">
+<label for="q6a">Solo di notte</label>
+<input type="radio" name="q6" class="wrong" id="q6b">
+<label for="q6b">Solo in autostrada</label>
+<input type="radio" name="q6" class="correct" id="q6c">
+<label for="q6c">Sempre</label>
+</div>
+<div class="box">
+<p><strong>7. Cosa indica il segnale di STOP?</strong></p>
+<input type="radio" name="q7" class="correct" id="q7a">
+<label for="q7a">Fermarsi a dare precedenza</label>
+<input type="radio" name="q7" class="wrong" id="q7b">
+<label for="q7b">Rallentare</label>
+<input type="radio" name="q7" class="wrong" id="q7c">
+<label for="q7c">Passare velocemente</label>
+</div>
+<div class="box">
+<p><strong>8. Guidare dopo avere bevuto alcol è sicuro?</strong></p>
+<input type="radio" name="q8" class="wrong" id="q8a">
+<label for="q8a">Si</label>
+<input type="radio" name="q8" class="correct" id="q8b">
+<label for="q8b">No</label>
+</div>
+<div class="box">
+<p><strong>9. Cosa indica il semaforo giallo?</strong></p>
+<input type="radio" name="q9" class="wrong" id="q9a">
+<label for="q9a">Accellerare</label>
+<input type="radio" name="q9" class="correct" id="q9b">
+<label for="q9b">Prepararsi a fermarsi</label>
+<input type="radio" name="q9" class="wrong" id="q9c">
+<label for="q9c">Spegenre il motore</label>
+</div>
+<div class="box">
+<p><strong>10. Qual è il limite di velocità nel centri abitati(di solito)?</strong></p>
+<input type="radio" name="q10" class="correct" id="q10a">
+<label for="q10a">50 km/h</label>
+<input type="radio" name="q10" class="wrong" id="q10b">
+<label for="q10b">90 km/h</label>
+<input type="radio" name="q10" class="wrong" id="q10c">
+<label for="q10c">130 km/h</label>
+</div>
+</div>
+<center>
+<a href="#verifica" class="button">Invia</a>
+</center>
+</body>
+</html>
